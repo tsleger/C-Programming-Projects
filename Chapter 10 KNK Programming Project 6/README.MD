@@ -7,10 +7,12 @@ When an operator is encountered, pop its operands from the stack, perform the op
 
 Write a program that evaluates RPN expressions. The operands will be single-digit integers, The operators are +, -, *, /, and =. The = operator causes the top stack item to be displayed; afterwards, the stack is cleared and the user is prompted to enter another expression. The process continues until the user enters a character that is not an operator or operand:
 
+''' 
 Enter an RPN expression: 1 2 3 * + =
 Value of expression: 7
 Enter an RPN expression: 5 8 * 4 9 - / =
 Value of expression: -8
-Enter an RPN expression: q
+Enter an RPN expression: q 
+'''
 
 If the stack overflows, the program will display the message Expression is too complex and terminate. If the stack underflows (because of an expression such as 1 2 + +), the program will display the message Not enough operands in expression and terminate. Hints: Incorporate the stack code from Section 10.2 into your program. Use scanf(" %c", &ch) to read the operators and operands.
