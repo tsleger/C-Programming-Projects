@@ -29,7 +29,7 @@ void max_min(int a[], int n, int *max, int *min)
   int i, big, small;
   big = a[0];
 
-  for(i = 1; i < N; i++) {
+  for(i = 1; i < n; i++) {
     if(a[i] > big) 
       big = a[i];
   }
@@ -37,11 +37,21 @@ void max_min(int a[], int n, int *max, int *min)
   *max = big;
 
   small = a[0];
-  for(i = 1; i < N; i++) {
+  for(i = 1; i < n; i++) {
     if(a[i] < small) 
       small = a[i];
   }
   
   *min = small;
- 
 }
+
+/* More efficient than using the two for-loops in the max_min definition is to combine then into one for-loop. This would look like:
+  
+  *max = *min = a[0];
+  for(int i = 1; i < n; i++) {
+    if(a[i] > *max)
+      *max = a[i];
+    else if(a[i] < *min)
+      *min = a[i];
+  }
+*/
