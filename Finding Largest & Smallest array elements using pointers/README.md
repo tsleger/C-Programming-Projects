@@ -1,0 +1,1 @@
+Practicing how pointers are passed to functions. The above code is an example of how to pass pointers to functions to find the largest and smallest elements of an array. Alternative code which generates the same result can be found on page 250 of K.N.King's _C Programming A Modern Approach_ 2nd Edition.
